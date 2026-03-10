@@ -15,9 +15,10 @@ The project was built as part of my machine learning learning journey to practic
 
 To build a Logistic Regression model that predicts whether a student will:
 
-0 → Continue
+Target Variable:
 
-1 → Dropout
+0 → Student continues their studies  
+1 → Student drops out
 
 based on academic, behavioral, and demographic features.
 
@@ -101,6 +102,23 @@ The model was evaluated using:
 
 These metrics helped evaluate how well the model predicts both dropout and non-dropout students.
 
+#### Model Performance
+Accuracy: ~73%
+
+Confusion Matrix
+[[1689 605]
+ [196 510]]
+
+ Interpretation:
+
+510 students who dropped out were correctly identified.
+
+1689 students who continued were correctly classified.
+
+196 dropout cases were missed.
+
+605 students were predicted as dropout but actually continued.
+
 #### Key Findings
 
 Academic performance indicators (e.g., GPA, study hours) influenced dropout predictions.
@@ -110,6 +128,8 @@ Stress-related features also showed predictive power.
 Using class_weight='balanced' helped improve performance on the minority class.
 
 Feature selection impacted model performance.
+
+The model showed reasonable performance for a baseline classifier, but further improvements could be achieved through feature engineering and model tuning.
 
 ### What I Learned
 
@@ -125,9 +145,10 @@ Through this project I learned:
   
   Importance of stratified train-test splitting.
 
-### Limitations
+  Feature scaling was  applied.
 
-Feature scaling was not applied (still learning pipelines).
+
+### Limitations
 
 No hyperparameter tuning yet.
 
@@ -138,8 +159,6 @@ Model is a baseline for learning purposes.
 ### Future Improvements
 
 Implement preprocessing pipelines.
-
-Apply feature scaling.
 
 Try advanced models (Random Forest, XGBoost).
 
